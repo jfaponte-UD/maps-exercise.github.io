@@ -103,12 +103,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
             legend.onAdd = function (map) {
 
-                var div = L.DomUtil.create('div', 'info legend'),
+                let div = L.DomUtil.create('div', 'info legend'),
 
                     grades = [0, 100000, 250000, 550000, 1500000, 2500000, 5500000, 15000000],
                     labels = [];
 
-                for (var i = 0; i < grades.length; i++) {
+                for (let i = 0; i < grades.length; i++) {
                     div.innerHTML +=
                         '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
                         grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
